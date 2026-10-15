@@ -1,0 +1,76 @@
+/* Pourmemo support pages: coffee journal look */
+:root {
+  --paper: #f6efe3;
+  --paper-deep: #ece1cf;
+  --ink: #3b2a20;
+  --ink-soft: #6b5546;
+  --rule: #d6c6ad;
+  --terracotta: #b5532f;
+  --terracotta-ink: #fff8f0;
+  --card: #fbf6ee;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1f1813;
+    --paper-deep: #2a211a;
+    --ink: #efe3d3;
+    --ink-soft: #c4b09b;
+    --rule: #4a3a2e;
+    --terracotta: #e07a52;
+    --terracotta-ink: #1f1813;
+    --card: #271e18;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.65 -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+.sheet { max-width: 720px; margin: 0 auto; padding: 28px 18px 64px; }
+.masthead {
+  display: flex; align-items: baseline; justify-content: space-between;
+  flex-wrap: wrap; gap: 8px 20px;
+  border-bottom: 2px solid var(--ink); padding-bottom: 12px;
+}
+.wordmark {
+  font-family: "New York", Georgia, "Times New Roman", serif;
+  font-size: 1.6rem; font-weight: 700; color: var(--ink); text-decoration: none;
+  letter-spacing: 0.01em;
+}
+.wordmark span { color: var(--terracotta); }
+.tabs { display: flex; gap: 16px; font-size: 0.95rem; }
+.tabs a { color: var(--ink-soft); text-decoration: none; }
+.tabs a[aria-current="page"] { color: var(--ink); border-bottom: 2px solid var(--terracotta); }
+h1, h2, h3 { font-family: "New York", Georgia, "Times New Roman", serif; line-height: 1.25; }
+h1 { font-size: 2rem; margin: 32px 0 8px; }
+h2 { font-size: 1.35rem; margin: 40px 0 10px; padding-top: 14px; border-top: 1px dashed var(--rule); }
+h3 { font-size: 1.08rem; margin: 22px 0 4px; }
+p, li { color: var(--ink); }
+.lede { color: var(--ink-soft); font-size: 1.05rem; margin-top: 0; }
+a { color: var(--terracotta); }
+.num, code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.92em; }
+.recipe {
+  background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+  padding: 16px 18px; margin: 20px 0;
+}
+.recipe-title { font-family: "New York", Georgia, serif; font-weight: 700; margin: 0 0 6px; }
+.recipe ol { margin: 8px 0 0; padding-left: 1.4em; }
+.recipe li { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.95rem; }
+.note { color: var(--ink-soft); font-size: 0.92rem; }
+.steps { padding-left: 1.3em; }
+.steps li { margin: 4px 0; }
+details { border-bottom: 1px solid var(--rule); padding: 10px 0; }
+summary { cursor: pointer; font-weight: 600; }
+details p { margin: 8px 0 2px; }
+.mail {
+  display: inline-block; background: var(--terracotta); color: var(--terracotta-ink);
+  padding: 10px 18px; border-radius: 999px; text-decoration: none; font-weight: 600;
+}
+.colophon {
+  margin-top: 56px; padding-top: 14px; border-top: 2px solid var(--ink);
+  font-size: 0.86rem; color: var(--ink-soft);
+}
+.colophon a { color: var(--ink-soft); }
